@@ -6,7 +6,9 @@
   "scripts": {
     "test": "node node_modules/.bin/mocha test/test.js",
     "lint": "eslint -- .",
-    "format": "prettier-standard '**/*.js'"
+    "format": "prettier-standard '**/*.js'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "image cache",
@@ -22,7 +24,8 @@
     "base64-img": "^1.0.3",
     "md5": "^2.2.1",
     "pako": "^1.0.5",
-    "zlib": "^1.0.5"
+    "zlib": "^1.0.5",
+    "snyk": "^1.189.0"
   },
   "repository": {
     "type": "git",
@@ -53,5 +56,6 @@
       "beforeEach": true
     },
     "rules": {}
-  }
+  },
+  "snyk": true
 }
